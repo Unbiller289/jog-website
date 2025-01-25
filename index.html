@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏃‍♂️Yuuk Sehat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>🏃‍♂️Yuuk Hidup Sehat!!!</h2>
+            <p>Didalam tubuh yang sehat, terdapat jiwa yang kuat</p>
+            <a href="#" class="hero-button">Lebih Lanjut</a>
+        </div>
+        <div class="hero-image">
+            <img src="Jogging.jpg" alt=""> 
+        </div>
+    </section>
+
+    <section class="carousel-wrapper">
+        <button class="carousel-button prev" onclick="prevSlide()"> <- </button>
+        <button class="carousel-button next" onclick="nextSlide()"> -> </button>
+        
+        <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 1"></div>
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 2"></div>
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 3"></div>
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 4"></div>
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 5"></div>
+                <div class="carousel-item"><img src="Marathon.jpg" alt="Gambar 6"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about">
+        <div class="about-content">
+            <h2>Mengapa Olahraga penting?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sapiente sed nulla? Ducimus iste neque tempora. Vitae, quisquam! Optio, inventore vitae. Fuga impedit totam dolores eligendi delectus? Cumque, architecto libero.</p>
+        </div>
+        <div class="about-content">
+            <h2>Penjelasan olahraga lari</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, maxime dignissimos. Corrupti vero voluptas accusamus! Molestiae, facilis excepturi nobis laborum dolore natus illum cumque eligendi! Ullam velit enim fugiat aperiam.</p>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Blog Section Start -->
+<section class="blog"> 
+    <h2>Blog</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi non consequatur alias tempora dignissimos est vel ullam minima? Autem cum consequatur ea aperiam, accusantium sed dolorem delectus reprehenderit voluptate nobis.</p>
+    <div class="cards-container">
+        <div class="card">
+            <img src="Marathon.jpg" alt="">
+            <h3>Lomba Lari K</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, eligendi pariatur expedita consequuntur cumque earum explicabo exercitationem et quam saepe, cum error ullam recusandae porro unde numquam! Laborum, ea reiciendis.</p>
+            <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+            <img src="Marathon.jpg" alt="">
+            <h3>Lomba Lari K</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, eligendi pariatur expedita consequuntur cumque earum explicabo exercitationem et quam saepe, cum error ullam recusandae porro unde numquam! Laborum, ea reiciendis.</p>
+            <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+            <img src="Marathon.jpg" alt="">
+            <h3>Lomba Lari K</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, eligendi pariatur expedita consequuntur cumque earum explicabo exercitationem et quam saepe, cum error ullam recusandae porro unde numquam! Laborum, ea reiciendis.</p>
+            <a href="#" class="btn">Baca Selengkapnya</a>
+        </div>
+    </div>
+</section>
+<!-- Blog Section End -->
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="footer-column">
+        <h3>Ayo Bergerak! </h3>
+        <p>Hubungi Kami</p>
+        <p>lari.yuk@gmail.com</p>
+        <p>Jakarta Barat, DKI Jakarta, INDONESIA</p>
+    </div>
+    <div class="footer-column">
+        <h3 >Kategori Lomba Lari</h3>
+        <a href="#">Kompetisi Lari Nasional</a>
+        <a href="#">Marathon</a>
+        <a href="#">Lari Jarak Pendek</a>
+    </div>
+    <div class="footer-column">
+        <h3>Menu</h3>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<script>
+    // Variabel
+    let currentSlide = 0;
+    const totalSlides = 6;
+    const visibleSlides = 3;
+    // Function
+
+    function updateCarousel() {
+        const track = document.getElementById('carousel-track');
+        const slideWidth = track.children[0].clientWidth;
+        track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides - visibleSlides) {
+            currentSlide++;
+        } else {
+            currentSlide = 0;
+        }
+        updateCarousel();
+        console.log("nextSlide" + currentSlide); //mirip seperti print pada python
+    }
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+        } else {
+            currentSlide = totalSlides - visibleSlides;
+        }
+        updateCarousel();
+        console.log("nextSlide" + currentSlide); //mirip seperti print pada python
+    }
+
+</script>
+
+</body>
+<head>
